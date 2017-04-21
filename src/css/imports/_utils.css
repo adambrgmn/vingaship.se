@@ -1,5 +1,3 @@
-@import "_variables.css";
-
 .debug,
 .debug * {
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -14,12 +12,4 @@
   margin: -1px;
   border: 0;
   padding: 0;
-}
-
-.link {
-  @apply --standardLink;
-}
-
-.balance-text {
-  text-wrap: balanced;
 }
