@@ -6,3 +6,29 @@ defaultContentLanguageInSubdir: false
 enableRobotsTXT: true
 enableEmoji: true
 MetaDataFormat: "yaml"
+
+blackfriday:
+  extensions:
+    - hardLineBreak
+
+params:
+  address:
+    street: Donsö Hamnväg 45
+    zip: SE-430 82
+    city: Donsö
+    country: Sverige
+
+  emails:
+    - info@vingaship.se
+    - technical@vingaship.se
+    - personnel@vingaship.se
+    - invoice@vingaship.se
+
+  phone:
+    - +4631973392
+
+  partners:
+    - title: MariTrain AB
+      url: http://maritrain.se/
+    - title: MH Shipping Concept AB
+      url: http://shippingconcept.se/
