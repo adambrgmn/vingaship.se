@@ -1,3 +1,11 @@
 {{ define "main" }}
-  <h1>Hello world!</h1>
+  {{ range .Data.Pages }}
+        <div>
+          {{ .Content }}
+
+          {{ if isset .Params "specs" }}
+            {{ partial "specs" . }}
+          {{ end }}
+        </div>
+    {{ end }}
 {{ end }}

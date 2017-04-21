@@ -1,0 +1,24 @@
+<div>
+  <img src="{{ .Get "img" }}" />
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">{{ .Get "name" }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mail</td>
+        <td>{{ .Get "mail" }}</td>
+      </tr>
+      <tr>
+        <td>Tel</td>
+        <td>{{ .Get "tel" }}</td>
+      </tr>
+      <tr>
+        <td>Mob</td>
+        <td>{{ .Get "mob" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
