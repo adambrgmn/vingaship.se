@@ -1,0 +1,8 @@
+baseurl: "http://vingaship.se/"
+title: "Vinga Ship Managemnet"
+languageCode: "sv"
+defaultContentLanguage: "sv"
+defaultContentLanguageInSubdir: false
+enableRobotsTXT: true
+enableEmoji: true
+MetaDataFormat: "yaml"
