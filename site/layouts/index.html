@@ -1,11 +1,11 @@
 {{ define "main" }}
   {{ range .Data.Pages }}
-        <div>
-          {{ .Content }}
+    <div id="{{ replace .Title " " "-" | lower}}">
+      {{ .Content }}
 
-          {{ if isset .Params "specs" }}
-            {{ partial "specs" . }}
-          {{ end }}
-        </div>
-    {{ end }}
+      {{ if isset .Params "specs" }}
+        {{ partial "specs" . }}
+      {{ end }}
+    </div>
+  {{ end }}
 {{ end }}

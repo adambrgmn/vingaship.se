@@ -1,23 +1,23 @@
-<div>
+<div id="hcard-{{ replace (.Get "name") " " "-" | lower }}">
   <img src="{{ .Get "img" }}" />
   <table>
     <thead>
       <tr>
-        <th colspan="2">{{ .Get "name" }}</th>
+        <th colspan="2" class="fn">{{ .Get "name" }}</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Mail</td>
-        <td>{{ .Get "mail" }}</td>
+        <td class="email">{{ .Get "mail" }}</td>
       </tr>
-      <tr>
-        <td>Tel</td>
-        <td>{{ .Get "tel" }}</td>
+      <tr class="tel">
+        <td class="type">Tel</td>
+        <td class="value">{{ .Get "tel" }}</td>
       </tr>
-      <tr>
-        <td>Mob</td>
-        <td>{{ .Get "mob" }}</td>
+      <tr class="tel">
+        <td class="type">Mob</td>
+        <td class="value">{{ .Get "mob" }}</td>
       </tr>
     </tbody>
   </table>

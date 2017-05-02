@@ -1,0 +1,45 @@
+<footer>
+  <div id="hcard-{{ replace .Site.Title " " "-" | lower}}" class="vcard">
+    <h3>Adress</h3>
+    <div class="org">{{ .Site.Title }}</div>
+    <div class="adr">
+      <div class="street-address">{{ .Site.Params.address.street }}</div>
+      <span class="postal-code">{{ .Site.Params.address.zip }}</span>
+      <span class="locality">{{ .Site.Params.address.city }}</span> |
+      <span class="country-name">{{ .Site.Params.address.country }}</span>
+    </div>
+  </div>
+
+  <div>
+    <h3>Epost</h3>
+    <ul>
+      {{ range .Site.Params.emails }}
+        <li>
+          <a href="mailto:{{ . }}">{{ . }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div>
+    <h3>Telefon</h3>
+    <ul>
+      {{ range .Site.Params.phone }}
+        <li>
+          {{ . }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div>
+    <h3>Partners</h3>
+    <ul>
+      {{ range .Site.Params.partners }}
+        <li>
+          <a href="{{ .url }}">{{ .title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</footer>

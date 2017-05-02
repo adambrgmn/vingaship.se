@@ -1,5 +1,5 @@
 baseurl: "http://vingaship.se/"
-title: "Vinga Ship Managemnet"
+title: "Vinga Ship Management"
 languageCode: "sv"
 defaultContentLanguage: "sv"
 defaultContentLanguageInSubdir: false
@@ -25,7 +25,7 @@ params:
     - invoice@vingaship.se
 
   phone:
-    - +4631973392
+    - "+4631973392"
 
   partners:
     - title: MariTrain AB

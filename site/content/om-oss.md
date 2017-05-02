@@ -3,6 +3,7 @@ date: 2017-04-21T12:28:21+02:00
 draft: true
 title: Om oss
 weight: 1
+menu: main
 
 ---
 
