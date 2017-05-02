@@ -1,5 +1,3 @@
-@import "./imports/_variables.css";
-
-h1 {
-  color: var(--color);
-}
+@import "./imports/_header.css";
+@import "./imports/_logotype.css";
+@import "./imports/_navigation.css";

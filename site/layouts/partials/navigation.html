@@ -1,9 +1,9 @@
-<nav>
-  <ul>
+<nav class="navigation">
+  <ul class="navigation__list">
     {{- $currentPage := . -}}
     {{ range .Site.Menus.main }}
-      <li class="{{if $currentPage.HasMenuCurrent "main" . }} active{{end}}">
-        <a href="#{{ replace .Name " " "-" | lower }}">{{ .Name }}</a>
+      <li class="navigation__item">
+        <a class="navigation__link" href="#{{ replace .Name " " "-" | lower }}">{{ .Name }}</a>
       </li>
     {{ end }}
   </ul>

@@ -31,7 +31,7 @@
     else window.addEventListener('load', loadDeferredStyles);
   </script>
 {{ else }}
-  <link rel="stylesheet" type="text/css" href="/assets/css/main.js" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
   {{ if isset .Params "css" }}
     {{ range .Params.css }}<link rel="stylesheet" type="text/css" href="/assets/css/{{ . }}" />{{ end }}
   {{ end }}

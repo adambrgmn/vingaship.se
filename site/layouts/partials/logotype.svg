@@ -1,0 +1,15 @@
+<svg class="logo" viewBox="0 0 200 200">
+  <clipPath id="logo__mask">
+    <path class="logo__mask" d="M31.9 57.55h138.52v101l-40.85-2-68-22.33-29.67-2.67v-74z" />
+  </clipPath>
+
+  <circle class="logo__circle" cx="100" cy="100" r="93.75" />
+
+  <path class="logo__wave" d="M12.33 131.55c87.67-3.67 77.67 30 160 27" />
+
+  <g class="logo__letter__container" clip-path="url(#logo__mask)">
+    <path class="logo__letter" d="M124.56 148.6l36.66-83.5h-32.59l-24.44 62.12c-2 4.07-6.11 4.07-8.15 0L71.61 65.1H39l29.53 64.15 4.12 10 27.45 9.39 22.1 5.77z" />
+  </g>
+
+  <circle class="logo__dot" cx="100" cy="54" r="13"/>
+</svg>

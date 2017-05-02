@@ -1,0 +1,39 @@
+:root {
+  --js-navigation-decoration-width: 0;
+  --js-navigation-decoration-offset: 0;
+}
+
+.navigation {
+  margin-left: var(--ms4);
+}
+
+.navigation__list {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + var(--ms-2));
+    left: var(--js-navigation-decoration-offset);
+    width: var(--js-navigation-decoration-width);
+    height: 3px;
+    background-color: var(--color-white);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.navigation__item {
+  display: inline-block;
+  margin-right: var(--ms1);
+  font-size: var(--ms0);
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.navigation__link {
+  color: var(--color-white);
+  text-decoration: none;
+  text-transform: uppercase;
+}

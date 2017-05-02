@@ -1,0 +1,23 @@
+@import './_variables.css';
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100vw;
+  height: calc(var(--ms1) + (var(--ms-2) * 2));
+  padding: var(--ms-2) var(--ms3);
+  font-family: var(--font-sans-serif);
+  font-size: var(--ms0);
+  background-color: color(var(--bg-navbar) alpha(75%));
+}
+
+.header__brand {
+  display: inline-block;
+  width: var(--ms1);
+  float: left;
+}
+
+.header__brand__title {
+  @apply --sr-only;
+}
