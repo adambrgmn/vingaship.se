@@ -9,7 +9,7 @@
   padding: var(--ms-2) var(--ms3);
   font-family: var(--font-sans-serif);
   font-size: var(--ms0);
-  background-color: color(var(--bg-navbar) alpha(75%));
+  background-color: var(--bg-navbar);
 }
 
 .header__brand {

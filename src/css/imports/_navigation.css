@@ -1,6 +1,7 @@
 :root {
   --js-navigation-decoration-width: 0;
   --js-navigation-decoration-offset: 0;
+  --nav-underline-height: 3px;
 }
 
 .navigation {
@@ -8,15 +9,13 @@
 }
 
 .navigation__list {
-  position: relative;
-
   &::after {
     content: "";
     position: absolute;
-    top: calc(100% + var(--ms-2));
+    top: calc(var(--header-height) - var(--nav-underline-height));
     left: var(--js-navigation-decoration-offset);
     width: var(--js-navigation-decoration-width);
-    height: 3px;
+    height: var(--nav-underline-height);
     background-color: var(--color-white);
     transition: all 0.2s ease-in-out;
   }

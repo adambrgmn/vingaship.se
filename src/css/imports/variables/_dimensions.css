@@ -1,0 +1,5 @@
+@import "./_scales.css";
+
+:root {
+  --header-height: calc(var(--ms1) + (var(--ms-2) * 2));
+}

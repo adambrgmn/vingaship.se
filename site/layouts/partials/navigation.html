@@ -2,7 +2,7 @@
   <ul class="navigation__list">
     {{- $currentPage := . -}}
     {{ range .Site.Menus.main }}
-      <li class="navigation__item">
+      <li class="navigation__item js-navItem">
         <a class="navigation__link" href="#{{ replace .Name " " "-" | lower }}">{{ .Name }}</a>
       </li>
     {{ end }}
