@@ -92,7 +92,11 @@ const hugoProd = () => hugo({
 const postcssPluginsCommon = [
   postcssImport(),
   postcssUrl(),
-  postcssCssnext(),
+  postcssCssnext({
+    features: {
+      customProperties: false,
+    },
+  }),
 ];
 
 const postcssPluginsDev = postcssPluginsCommon.concat([
@@ -164,7 +168,7 @@ const faviconsProd = () => gulp.src(PATHS.favicon.src)
 const watch = () => {
   gulp.watch(PATHS.site.watch, gulp.series(hugoDev, server.reload));
   gulp.watch(PATHS.css.watch, cssDev);
-  gulp.watch(PATHS.js.watch, jsDev);
+  gulp.watch(PATHS.js.watch, gulp.series(jsDev, server.reload));
 };
 
 /**
