@@ -1,5 +1,10 @@
-# Dist files
 dist
+.temp
+
+# Hash tables and hashed assets
+site/data/hash
+site/static/assets/css
+site/static/assets/js
 
 # Logs
 logs

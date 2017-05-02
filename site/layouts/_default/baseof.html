@@ -13,8 +13,10 @@
     </main>
 
     {{ partial "footer" . }}
+    
+    {{ partial "styles" . }}
+    {{ partial "scripts" . }}
 
     {{ template "_internal/google_analytics_async.html" . }}
-    <script src="/app.js" async></script>
   </body>
 </html>
