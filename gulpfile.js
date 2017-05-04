@@ -14,6 +14,7 @@ const cssnano = require('cssnano');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const named = require('vinyl-named');
+const sharp = require('./gulp/sharp');
 const favicons = require('gulp-favicons');
 
 const server = require('./gulp/server');
@@ -40,8 +41,13 @@ const PATHS = {
     dest: { DEV: '.temp/assets/js', PROD: 'site/static/assets/js' },
     watch: 'src/js/**/*.js',
   },
+  uploads: {
+    src: 'src/img/*.{jpeg,jpg,png,tiff,webp}',
+    dest: { DEV: '.temp/assets/img', PROD: 'site/static/assets/img' },
+    watch: 'src/img/*.{jpeg,jpg,png,tiff,webp}',
+  },
   favicon: {
-    src: 'src/img/favicon.png',
+    src: 'src/favicon.png',
     dest: 'site/static',
   },
   hash: 'site/data/hash',
@@ -56,6 +62,7 @@ const clean = () => del([
   PATHS.site.dest.PROD,
   PATHS.css.dest.PROD,
   PATHS.js.dest.PROD,
+  PATHS.uploads.dest.PROD,
   PATHS.hash,
   'site/static/favicon*.*',
 ]);
@@ -63,6 +70,7 @@ const clean = () => del([
 const postProdClean = () => del([
   PATHS.css.dest.PROD,
   PATHS.js.dest.PROD,
+  PATHS.uploads.dest.PROD,
   PATHS.hash,
   'site/static/favicon*.*',
 ]);
@@ -141,6 +149,21 @@ const jsProd = () => gulp.src(PATHS.js.src)
 
 
 /**
+ * UPLOADS
+ */
+
+const sharper = sharp({ width: 800 });
+
+const uploadsDev = () => gulp.src(PATHS.uploads.src, { buffer: false })
+  .pipe(sharper)
+  .pipe(gulp.dest(PATHS.uploads.dest.DEV));
+
+const uploadsProd = () => gulp.src(PATHS.uploads.src, { buffer: false })
+  .pipe(sharper)
+  .pipe(gulp.dest(PATHS.uploads.dest.PROD));
+
+
+/**
  * FAVICONS
  */
 const faviconsProd = () => gulp.src(PATHS.favicon.src)
@@ -169,6 +192,7 @@ const watch = () => {
   gulp.watch(PATHS.site.watch, gulp.series(hugoDev, server.reload));
   gulp.watch(PATHS.css.watch, cssDev);
   gulp.watch(PATHS.js.watch, gulp.series(jsDev, server.reload));
+  gulp.watch(PATHS.uploads.watch, gulp.series(uploadsDev, server.reload));
 };
 
 /**
@@ -176,11 +200,11 @@ const watch = () => {
  */
 const buildDev = gulp.series(
   hugoDev,
-  gulp.parallel(cssDev, jsDev) // eslint-disable-line comma-dangle
+  gulp.parallel(cssDev, jsDev, uploadsDev) // eslint-disable-line comma-dangle
 );
 
 const buildProd = gulp.series(
-  gulp.parallel(cssProd, jsProd, faviconsProd),
+  gulp.parallel(cssProd, jsProd, uploadsProd, faviconsProd),
   hugoProd,
   postProdClean // eslint-disable-line comma-dangle
 );
