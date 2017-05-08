@@ -1,5 +1,5 @@
 <div class="contact-card" id="hcard-{{ replace (.Get "name") " " "-" | lower }}">
-  <img src="{{ .Get "img" }}" />
+  <img src="{{ .Get "img" | default "http://placehold.it/300x263?text= " }}" />
   <div class="contact-card__table-wrapper">
     <table class="contact-card__table">
       <thead>

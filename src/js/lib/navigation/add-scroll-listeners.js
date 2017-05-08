@@ -23,7 +23,7 @@ export default () => {
 
         raf(() => store.dispatch(actions.updateActiveItem(correspondingNavItem.anchor)));
       } else if (
-        entry.target.id === 'om-oss' &&
+        (entry.target.id === 'om-oss' || entry.target.id === 'about-us') &&
         entry.rootBounds.top < entry.boundingClientRect.top
       ) {
         raf(() => store.dispatch(actions.updateActiveItem(null)));

@@ -8,7 +8,7 @@ menu: main
 img: http://placehold.it/500x300
 secondaryImg: http://placehold.it/600x300
 
-specsLink: /specs.pdf
+specsLink: /assets/img/vinga-safir-2015.pdf
 specs:
   - title: IMO nummer
     value: 9200158
@@ -16,7 +16,7 @@ specs:
     value: Vinga Safir
   - title: Anropssignal
     value: OZ2136
-  - title: Flag
+  - title: Flagga
     value: Färöarna
   - title: Hemmahamn
     value: Torshavn

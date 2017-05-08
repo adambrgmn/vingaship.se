@@ -6,6 +6,15 @@ defaultContentLanguageInSubdir: false
 enableRobotsTXT: true
 enableEmoji: true
 MetaDataFormat: "yaml"
+EnableMissingTranslationPlaceholders: true
+
+languages:
+  sv:
+    weight: 0
+    languageName: "Svenska"
+  en:
+    weight: 1
+    languageName: "English"
 
 blackfriday:
   extensions:

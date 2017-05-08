@@ -6,5 +6,13 @@
         <a class="navigation__link" href="#{{ .Name | urlize }}">{{ .Name }}</a>
       </li>
     {{ end }}
+    {{ range .Site.Languages }}
+      {{ if eq .Lang $.Site.Language.Lang }}
+      {{ else }}
+        <li class="navigation__item navigation__item-last">
+          <a class="navigation__link" href="/{{ .Lang }}">{{ i18n "in" }} {{ .LanguageName }}</a>
+        </li>
+      {{ end }}
+    {{ end }}
   </ul>
 </nav>

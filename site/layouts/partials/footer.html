@@ -1,6 +1,6 @@
 <footer class="footer">
   <div id="hcard-{{ replace .Site.Title " " "-" | lower}}" class="footer__section vcard">
-    <h3>Adress</h3>
+    <h3>{{ i18n "address" }}</h3>
     <div class="org">{{ .Site.Title }}</div>
     <div class="adr">
       <div class="street-address">{{ .Site.Params.address.street }}</div>
@@ -11,7 +11,7 @@
   </div>
 
   <div class="footer__section">
-    <h3>Epost</h3>
+    <h3>{{ i18n "emails" }}</h3>
     <ul>
       {{ range .Site.Params.emails }}
         <li>
@@ -22,7 +22,7 @@
   </div>
 
   <div class="footer__section">
-    <h3>Telefon</h3>
+    <h3>{{ i18n "phone" }}</h3>
     <ul>
       {{ range .Site.Params.phone }}
         <li class="js-stylePhone">
@@ -33,7 +33,7 @@
   </div>
 
   <div class="footer__section">
-    <h3>Partners</h3>
+    <h3>{{ i18n "partners" }}</h3>
     <ul>
       {{ range .Site.Params.partners }}
         <li>
