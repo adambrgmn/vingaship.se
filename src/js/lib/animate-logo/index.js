@@ -1,3 +1,5 @@
+import raf from '../utils/raf';
+
 const addAnimate = document.querySelectorAll('.js-addAnimate');
 const image = document.querySelector('.js-awaitLoad');
 const newImage = document.createElement('img');
@@ -14,7 +16,7 @@ const url = backgroundImage
 newImage.setAttribute('src', url);
 
 function runOnLoadAndRemove(el, fn) {
-  el.addEventListener('load', fn, { once: true });
+  el.addEventListener('load', () => raf(fn), { once: true });
 }
 
 runOnLoadAndRemove(newImage, toggleAnimate);
