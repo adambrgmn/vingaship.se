@@ -1,13 +1,13 @@
 {{ if eq (getenv "NODE_ENV") "production" }}
-  <script src="/assets/js/{{ index .Site.Data.hash.js "main.js" }}"></script>
+  <script src="/assets/js/{{ index .Site.Data.hash.js "main.js" }}" async></script>
 
   {{ if isset .Params "js" }}
     {{ range .Params.js }}<script src="/assets/js/{{ index $.Site.Data.hash.js . | default . }}"></script>{{ end }}
   {{ end }}
 {{ else }}
-  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/main.js" async></script>
 
   {{ if isset .Params "js" }}
-    {{ range .Params.js }}<script src="/assets/js/{{ . }}"></script>{{ end }}
+    {{ range .Params.js }}<script src="/assets/js/{{ . }}" async></script>{{ end }}
   {{ end }}
 {{ end }}
