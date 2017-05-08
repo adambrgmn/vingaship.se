@@ -1,4 +1,4 @@
-const phones = document.querySelectorAll('.js-stylePhone');
+const phones = [...document.querySelectorAll('.js-stylePhone')];
 
 const phoneRegExp = /^(\+\d{2})(\d{2})(\d{2,3})(\d{2})(\d{2})$/;
 

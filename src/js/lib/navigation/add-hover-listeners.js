@@ -9,7 +9,7 @@ const getDimensions = (target) => {
 
 export default () => {
   let delay;
-  const navItems = document.querySelectorAll('.js-navItem');
+  const navItems = [...document.querySelectorAll('.js-navItem')];
 
   navItems.forEach((item) => {
     item.addEventListener('mouseenter', () => {

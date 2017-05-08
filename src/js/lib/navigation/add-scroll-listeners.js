@@ -16,7 +16,8 @@ export default () => {
   };
 
   const ioCallback = (entries) => {
-    entries.forEach((entry) => {
+    const ent = [...entries];
+    ent.forEach((entry) => {
       if (entry.intersectionRatio > ioOpts.threshold) {
         const anchor = entry.target.id;
         const correspondingNavItem = navItems.find(i => i.anchor === anchor);
