@@ -1,3 +1,5 @@
+import 'intersection-observer';
+import 'zenscroll';
 import balanceText from 'balance-text';
 import './lib/navigation';
 import './lib/style-phone';

@@ -3147,6 +3147,10 @@ interpret@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.3.tgz#cbc35c62eeee73f19ab7b10a801511401afc0f90"
 
+intersection-observer@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.2.1.tgz#cb55175f4eebef6436d957a7d1774d39a9248e5e"
+
 invariant@^2.2.0, invariant@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
@@ -7143,3 +7147,7 @@ yauzl@2.4.1:
 yeast@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
+
+zenscroll@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/zenscroll/-/zenscroll-4.0.0.tgz#4baefa4a1b9fb3bcc6d365e200648ff339e447a8"
