@@ -4,11 +4,11 @@ const gutil = require('gulp-util');
 
 const PLUGIN_NAME = 'gulp-hugo';
 
-const filterMessages = (containing) => (message) => {
+const filterMessages = containing => (message) => {
   const lines = message.split('\n');
   return lines
     .filter(str => str.toLowerCase().includes(containing.toLowerCase()))
-}
+};
 
 const filterNone = filterMessages('');
 const filterWarnings = filterMessages('WARN');
@@ -22,12 +22,13 @@ const formatOutput = messages => messages.map((msg) => {
 
 const constructArgs = (opts) => {
   const flags = {
+    baseUrl: ['-b', opts.baseUrl],
     buildDrafts: ['-D'],
     buildExpired: ['-E'],
     buildFuture: ['-F'],
     dest: ['-d', path.resolve(opts.dest || 'dist')],
     src: ['-s', path.resolve(opts.src || '')],
-  }
+  };
 
   return Object.keys(opts).reduce((acc, key) => {
     if (!opts[key] || !flags[key]) return acc;
