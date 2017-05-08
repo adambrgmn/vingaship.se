@@ -2,4 +2,5 @@
 
 :root {
   --header-height: calc(var(--ms1) + (var(--ms-2) * 2));
+  --jumbotron-height: 100vh;
 }

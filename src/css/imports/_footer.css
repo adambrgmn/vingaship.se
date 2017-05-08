@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: var(--ms3);
+  border-top: 1px dotted var(--color-light-grey);
+  padding: var(--ms3) 0;
+  font-family: var(--font-sans-serif);
+  font-size: var(--ms0);
+  line-height: var(--lh3);
+
+  & h3 {
+    font-size: var(--ms1);
+  }
+}

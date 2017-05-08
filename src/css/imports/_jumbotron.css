@@ -1,0 +1,48 @@
+.jumbotron__background {
+  z-index: var(--z0);
+  width: 100%;
+  height: var(--jumbotron-height);
+  margin-bottom: calc(-1 * var(--jumbotron-height));
+  background-image: url("/assets/img/vingaship-0.png");
+  background-size: cover;
+}
+
+.jumbotron {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: var(--jumbotron-height);
+}
+
+.jumbotron__branding {
+  width: calc(100% / 3);
+  fill: var(--color-white);
+  opacity: 0.75;
+
+  & .logo {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: var(--ms-1);
+  }
+
+  & .logo__circle,
+  & .logo__wave {
+    stroke: var(--color-white);
+  }
+}
+
+.jumbotron__branding__title {
+  opacity: 0;
+  transform: translateY(-2rem);
+  transition: all 0.3s;
+  transition-delay: calc(var(--animation-duration) * 2);
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,6 +1,6 @@
-<div id="hcard-{{ replace (.Get "name") " " "-" | lower }}">
+<div class="contact-card" id="hcard-{{ replace (.Get "name") " " "-" | lower }}">
   <img src="{{ .Get "img" }}" />
-  <table>
+  <table class="contact-card__table">
     <thead>
       <tr>
         <th colspan="2" class="fn">{{ .Get "name" }}</th>
@@ -9,15 +9,16 @@
     <tbody>
       <tr>
         <td>Mail</td>
-        <td class="email">{{ .Get "mail" }}</td>
+        {{ $mail := (.Get "mail") }}
+        <td class="email"><a href="mailto:{{ $mail }}">{{ $mail }}</a></td>
       </tr>
       <tr class="tel">
         <td class="type">Tel</td>
-        <td class="value">{{ .Get "tel" }}</td>
+        <td class="value js-stylePhone">{{ .Get "tel" }}</td>
       </tr>
       <tr class="tel">
         <td class="type">Mob</td>
-        <td class="value">{{ .Get "mob" }}</td>
+        <td class="value js-stylePhone">{{ .Get "mob" }}</td>
       </tr>
     </tbody>
   </table>

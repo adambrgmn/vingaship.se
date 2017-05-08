@@ -1,0 +1,141 @@
+.section__divider {
+  z-index: var(--z0);
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+
+  &:nth-of-type(3n + 0) {
+    background-image: url("/assets/img/vingaship-1.png");
+  }
+
+  &:nth-of-type(3n + 1) {
+    background-image: url("/assets/img/vingaship-2.png");
+  }
+
+  &:nth-of-type(3n + 2) {
+    background-image: url("/assets/img/vingaship-3.png");
+  }
+
+  &:last-of-type {
+    height: 0;
+  }
+}
+
+.section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  z-index: var(--z1);
+  padding: var(--ms5) 0;
+  background-color: var(--color-white);
+  font-family: var(--font-sans-serif);
+}
+
+.section__content,
+.section__specs,
+.section__specsButton {
+  width: 25rem;
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+.section__hidden {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.section {
+  & h1 {
+    margin-bottom: var(--ms1);
+    font-size: var(--ms2);
+    line-height: var(--lh1);
+    min-width: 25rem;
+  }
+
+  & p {
+    line-height: var(--lh3);
+    min-width: 25rem;
+    margin-bottom: var(--ms0);
+  }
+}
+
+.section__specs {
+  & table {
+    width: 100%;
+    min-width: 25rem;
+    font-size: var(--ms0);
+    line-height: var(--lh3);
+  }
+
+  & tr {
+    border-bottom: 1px solid var(--color-light-grey);
+  }
+
+  & thead tr { border-width: 2px; }
+  & tfoot tr { border: none; }
+
+  & td,
+  & th {
+    padding: var(--ms-2) 0;
+  }
+
+  & tfoot td { text-align: right; }
+}
+
+.section__specsButton button {
+  position: relative;
+  border: none;
+  padding: var(--ms-1);
+  font-size: var(--ms-1);
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  & .svg-icon {
+    display: inline-flex;
+    align-self: center;
+    position: relative;
+    height: 1em;
+    width: 1em;
+  }
+
+  & .svg-icon svg {
+    position: absolute;
+    bottom: -0.125em;
+  }
+}
+
+.contact-cards {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin-top: var(--ms2);
+}
+
+.contact-card {
+  width: 45%;
+  overflow: scroll;
+}
+
+.contact-card__table {
+  width: 100%;
+  margin-top: var(--ms-1);
+  font-size: var(--ms0);
+  line-height: var(--lh0);
+
+  & thead {
+    font-size: var(--ms0);
+    border-bottom: 1px solid var(--color-light-grey);
+  }
+
+  & td {
+    padding-top: var(--ms-2);
+    padding-right: var(--ms-2);
+  }
+}

@@ -1,37 +1,22 @@
-import createStore from '../store';
-import reducer from './reducer';
-import setDimensions from './setDimensions';
+import store from '../store';
+import { actions } from '../store/reducers/navigation';
+import updateNavDecoration from './update-nav-decoration';
+import addHoverListeners from './add-hover-listeners';
+import addScrollListeners from './add-scroll-listeners';
+import './enable-smooth-scroll';
 
-const store = createStore(reducer);
-store.subscribe(setDimensions);
+store.subscribe(updateNavDecoration);
 
-const UPDATE_DIMENSIONS = 'UPDATE_DIMENSIONS';
-const updateDimensionsAction = ({ offset, width }) => ({ type: UPDATE_DIMENSIONS, offset, width });
+addHoverListeners();
+addScrollListeners();
+addResizeListeners(); // eslint-disable-line
 
-const navItems = document.querySelectorAll('.js-navItem');
-const activeItem = document.querySelector('.js-navItem-active') || navItems[0];
-let waitingFn;
+function addResizeListeners() {
+  const val = window.innerHeight * (1 / 3);
+  store.dispatch(actions.updateSentinel(val));
 
-navItems.forEach((navItem) => {
-  navItem.addEventListener('mouseenter', ({ target }) => {
-    const { left: offset, width } = target.getBoundingClientRect();
-    store.dispatch(updateDimensionsAction({ width, offset }));
-    if (waitingFn) {
-      window.clearTimeout(waitingFn);
-      waitingFn = undefined;
-    }
+  window.addEventListener('resize', () => {
+    const newVal = window.innerHeight * (1 / 3);
+    store.dispatch(actions.updateSentinel(newVal));
   });
-
-  navItem.addEventListener('mouseleave', () => {
-    let dimensions = { width: 0, offset: 0 };
-
-    if (activeItem) {
-      const { left: offset, width } = activeItem.getBoundingClientRect();
-      dimensions = { width, offset };
-    }
-
-    waitingFn = window.setTimeout(() => {
-      store.dispatch(updateDimensionsAction(dimensions));
-    }, 300);
-  });
-});
+}

@@ -36,3 +36,5 @@ specs:
 # Fartyg
 
 Ett fartyg vi bemannar och sköter tekniskt är Vinga Safir. En välskött produkttanker från år 2000 i Europafart. Vinga Safir seglar under Färöisk flagg, är på 2 650 ton dödvikt, har en total längd på 80 meter och en besättning på 8 personer.
+
+![Vinga Safir](/assets/img/vinga-safir-1.jpg)

@@ -42,9 +42,9 @@ const PATHS = {
     watch: 'src/js/**/*.js',
   },
   uploads: {
-    src: 'src/img/*.{jpeg,jpg,png,tiff,webp}',
-    dest: { DEV: '.temp/assets/img', PROD: 'site/static/assets/img' },
-    watch: 'src/img/*.{jpeg,jpg,png,tiff,webp}',
+    src: 'src/uploads/*.{jpeg,jpg,png,tiff,webp}',
+    dest: { DEV: '.temp/assets/uploads', PROD: 'site/static/assets/uploads' },
+    watch: 'src/uploads/*.{jpeg,jpg,png,tiff,webp}',
   },
   favicon: {
     src: 'src/favicon.png',

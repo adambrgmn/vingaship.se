@@ -12,3 +12,10 @@
 .balance-text {
   text-wrap: balanced;
 }
+
+.img-responsive,
+section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

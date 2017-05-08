@@ -1,5 +1,4 @@
 @import './_variables.css';
-
 :root {
   --animation-duration: 1s;
 }
@@ -7,44 +6,58 @@
 .logo {
   display: block;
   width: 100%;
-  fill: var(--color-white);
 }
 
 .logo__circle,
 .logo__wave {
   fill: none;
-  stroke: var(--color-white);
   stroke-width: 12.5;
-  animation-name: logoLines;
-  transform-origin: 50% 50%;
 }
 
-.logo__circle {
-  transform: rotate(270deg);
+.js-addAnimate {
+  opacity: 0;
+}
 
-  .animated & {
+.animate {
+  opacity: 1;
+
+  & .logo__circle,
+  & .logo__wave,
+  & .logo__letter,
+  & .logo__dot {
+    animation-duration: var(--animation-duration);
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    transform-origin: 50% 50%;
+  }
+
+  & .logo__circle,
+  & .logo__wave {
+    animation-name: logoLines;
+  }
+
+  & .logo__circle {
     stroke-dasharray: 590;
     stroke-dashoffset: 590;
+    transform: rotate(270deg);
   }
-}
 
-.logo__wave {
-  animation-delay: calc(var(--animation-duration) * 0.55);
-
-  .animated & {
+  & .logo__wave {
     stroke-dasharray: 165;
     stroke-dashoffset: 165;
+    animation-delay: calc(var(--animation-duration) * 0.55);
   }
-}
 
-.logo__letter {
-  animation-name: logoLetter;
-  animation-delay: calc(var(--animation-duration) * 1.2);
-}
+  & .logo__letter {
+    animation-name: logoLetter;
+    animation-delay: calc(var(--animation-duration) * 1.2);
+  }
 
-.logo__dot {
-  animation-name: logoDot;
-  animation-delay: calc(var(--animation-duration) * 1.4);
+  & .logo__dot {
+    animation-name: logoDot;
+    animation-delay: calc(var(--animation-duration) * 1.4);
+  }
 }
 
 @keyframes logoLines {

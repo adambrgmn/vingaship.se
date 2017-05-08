@@ -1,11 +1,15 @@
 @import './_variables.css';
 
 .header {
+  position: sticky;
+  z-index: var(--z5);
+  top: 0;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   width: 100vw;
-  height: calc(var(--ms1) + (var(--ms-2) * 2));
+  height: var(--header-height);
+  margin-bottom: calc(-1 * var(--header-height));
   padding: var(--ms-2) var(--ms3);
   font-family: var(--font-sans-serif);
   font-size: var(--ms0);
@@ -16,6 +20,15 @@
   display: inline-block;
   width: var(--ms1);
   float: left;
+
+  & .logo {
+    fill: var(--color-white);
+  }
+
+  & .logo__circle,
+  & .logo__wave {
+    stroke: var(--color-white);
+  }
 }
 
 .header__brand__title {

@@ -1,10 +1,8 @@
 @import './variables/_colors.css';
 @import './variables/_dimensions.css';
 @import './variables/_fonts.css';
+@import './variables/_line-height.css';
 @import './variables/_hide.css';
 @import './variables/_media-queries.css';
 @import './variables/_scales.css';
-
-:root {
-  --color: #000;
-}
+@import './variables/_z-index.css';

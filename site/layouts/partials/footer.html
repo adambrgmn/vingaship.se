@@ -1,5 +1,5 @@
-<footer>
-  <div id="hcard-{{ replace .Site.Title " " "-" | lower}}" class="vcard">
+<footer class="footer">
+  <div id="hcard-{{ replace .Site.Title " " "-" | lower}}" class="footer__section vcard">
     <h3>Adress</h3>
     <div class="org">{{ .Site.Title }}</div>
     <div class="adr">
@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <div>
+  <div class="footer__section">
     <h3>Epost</h3>
     <ul>
       {{ range .Site.Params.emails }}
@@ -21,18 +21,18 @@
     </ul>
   </div>
 
-  <div>
+  <div class="footer__section">
     <h3>Telefon</h3>
     <ul>
       {{ range .Site.Params.phone }}
-        <li>
+        <li class="js-stylePhone">
           {{ . }}
         </li>
       {{ end }}
     </ul>
   </div>
 
-  <div>
+  <div class="footer__section">
     <h3>Partners</h3>
     <ul>
       {{ range .Site.Params.partners }}

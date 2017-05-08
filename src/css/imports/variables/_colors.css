@@ -1,5 +1,7 @@
 :root {
   --color-main: #173b70;
   --color-white: #fff;
+  --color-black: #000;
+  --color-light-grey: #ddd;
   --bg-navbar: rgba(20, 20, 20, 0.75);
 }
