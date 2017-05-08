@@ -5,6 +5,7 @@
   margin-bottom: calc(-1 * var(--jumbotron-height));
   background-image: url("/assets/img/vingaship-0.png");
   background-size: cover;
+  background-position: 50% 50%;
 }
 
 .jumbotron {
@@ -19,7 +20,7 @@
 }
 
 .jumbotron__branding {
-  width: calc(100% / 3);
+  width: calc(100% / 2);
   fill: var(--color-white);
   opacity: 0.75;
 
@@ -32,6 +33,10 @@
   & .logo__circle,
   & .logo__wave {
     stroke: var(--color-white);
+  }
+
+  @media (--breakpoint-not-small) {
+    width: calc(100% / 3);
   }
 }
 

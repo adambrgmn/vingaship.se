@@ -3,7 +3,6 @@
   --js-navigation-decoration-offset: 0;
   --nav-underline-height: 3px;
 }
-
 .navigation {
   margin-left: var(--ms4);
 }

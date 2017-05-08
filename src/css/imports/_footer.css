@@ -1,16 +1,27 @@
 .footer {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: space-around;
   width: 100%;
   margin-top: var(--ms3);
   border-top: 1px dotted var(--color-light-grey);
-  padding: var(--ms3) 0;
+  padding: var(--ms3);
   font-family: var(--font-sans-serif);
   font-size: var(--ms0);
   line-height: var(--lh3);
 
+  & > div {
+    margin-bottom: var(--ms1);
+  }
+
   & h3 {
     font-size: var(--ms1);
+  }
+}
+
+@media (--breakpoint-not-small) {
+  .footer {
+    flex-flow: row wrap;
+    padding: var(--ms3) 0;
   }
 }

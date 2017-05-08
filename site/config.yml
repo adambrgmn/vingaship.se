@@ -37,7 +37,9 @@ params:
     - "+4631973392"
 
   partners:
+    - title: Swedia Tankerfrakt AB
+      url: http://www.swedia.se
     - title: MariTrain AB
-      url: http://maritrain.se/
+      url: http://www.maritrain.se/
     - title: MH Shipping Concept AB
-      url: http://shippingconcept.se/
+      url: http://www.shippingconcept.se/

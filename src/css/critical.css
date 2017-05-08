@@ -1,3 +1,4 @@
+@import "./imports/_reset.css";
 @import "./imports/_header.css";
 @import "./imports/_logotype.css";
 @import "./imports/_navigation.css";

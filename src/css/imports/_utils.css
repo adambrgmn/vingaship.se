@@ -1,16 +1,7 @@
 @import "./_variables.css";
 
-.debug,
-.debug * {
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
 .sr-only {
   @apply --sr-only;
-}
-
-.balance-text {
-  text-wrap: balanced;
 }
 
 .img-responsive,

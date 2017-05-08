@@ -8,4 +8,13 @@
   </div>
 
   {{ partial "navigation" . }}
+
+  <div class="header__lang">
+    {{ range .Site.Languages }}
+      {{ if eq .Lang $.Site.Language.Lang }}
+      {{ else }}
+        <a class="header__lang__link" href="/{{ .Lang }}">{{ .LanguageName }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
 </header>
