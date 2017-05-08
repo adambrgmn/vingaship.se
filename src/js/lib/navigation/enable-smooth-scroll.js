@@ -1,23 +1,38 @@
 import raf from '../utils/raf';
 
-const DURATION = 500 / 60;
+const ease = t => (t < 0.5 ?
+  16 * t * t * t * t * t :
+  1 + (16 * (--t) * t * t * t * t));
 
-const scrollToTarget = (target) => {
-  const { top: targetY } = target.getBoundingClientRect();
-  const windowY = window.scrollY || document.documentElement.scrollTop;
-  const distance = targetY - windowY;
-  const steps = distance / DURATION;
+function scrollTo(element, to, duration) {
+  const ticks = 100;
+  const timeout = duration / ticks;
 
-  const scrollLoop = (distanceTraveled = 0, count = 0) => {
-    if (distanceTraveled >= Math.abs(distance)) return;
+  const startingPos = element.scrollTop;
+  const diff = to - startingPos;
 
-    window.scrollTo(0, windowY + (steps * count));
-    setTimeout(() => {
-      scrollLoop(distanceTraveled + steps, count + 1);
-    }, 20);
+  const scroll = (tick = 0) => {
+    if (tick >= ticks) return;
+    const ticksPerc = tick / ticks;
+    const easeVal = ease(ticksPerc);
+
+    element.scrollTop = startingPos + (diff * easeVal);
+    setTimeout(() => scroll(tick + 1), timeout);
   };
 
-  raf(() => scrollLoop());
-};
+  raf(() => scroll());
+}
 
-window.scrollToTarget = scrollToTarget;
+const navItems = document.querySelectorAll('.js-navItem a');
+navItems.forEach((item) => {
+  const id = item
+    .getAttribute('href')
+    .replace('#', '');
+
+  const section = document.getElementById(id);
+
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollTo(document.documentElement, section.offsetTop, 600);
+  });
+});
