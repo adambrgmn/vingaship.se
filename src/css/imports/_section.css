@@ -38,7 +38,6 @@
   overflow: hidden;
   opacity: 1;
   visibility: visible;
-  transition: all 0.3s ease-in-out;
 }
 
 .section__hidden {
@@ -120,7 +119,11 @@
 
 .contact-card {
   width: 45%;
-  overflow: scroll;
+}
+
+.contact-card__table-wrapper {
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 .contact-card__table {

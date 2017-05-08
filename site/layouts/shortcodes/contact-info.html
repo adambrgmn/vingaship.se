@@ -1,25 +1,27 @@
 <div class="contact-card" id="hcard-{{ replace (.Get "name") " " "-" | lower }}">
   <img src="{{ .Get "img" }}" />
-  <table class="contact-card__table">
-    <thead>
-      <tr>
-        <th colspan="2" class="fn">{{ .Get "name" }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Mail</td>
-        {{ $mail := (.Get "mail") }}
-        <td class="email"><a href="mailto:{{ $mail }}">{{ $mail }}</a></td>
-      </tr>
-      <tr class="tel">
-        <td class="type">Tel</td>
-        <td class="value js-stylePhone">{{ .Get "tel" }}</td>
-      </tr>
-      <tr class="tel">
-        <td class="type">Mob</td>
-        <td class="value js-stylePhone">{{ .Get "mob" }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="contact-card__table-wrapper">
+    <table class="contact-card__table">
+      <thead>
+        <tr>
+          <th colspan="2" class="fn">{{ .Get "name" }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mail</td>
+          {{ $mail := (.Get "mail") }}
+          <td class="email"><a href="mailto:{{ $mail }}">{{ $mail }}</a></td>
+        </tr>
+        <tr class="tel">
+          <td class="type">Tel</td>
+          <td class="value js-stylePhone">{{ .Get "tel" }}</td>
+        </tr>
+        <tr class="tel">
+          <td class="type">Mob</td>
+          <td class="value js-stylePhone">{{ .Get "mob" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

@@ -1,10 +1,12 @@
 import raf from '../utils/raf';
+import store from '../store';
+import { actions } from '../store/reducers/navigation';
 
 const ease = t => (t < 0.5 ?
   16 * t * t * t * t * t :
   1 + (16 * (--t) * t * t * t * t));
 
-function scrollTo(element, to, duration) {
+const scrollTo = (element, to, duration) => new Promise((resolve) => {
   const ticks = 100;
   const timeout = duration / ticks;
 
@@ -12,7 +14,11 @@ function scrollTo(element, to, duration) {
   const diff = to - startingPos;
 
   const scroll = (tick = 0) => {
-    if (tick >= ticks) return;
+    if (tick >= ticks) {
+      resolve();
+      return;
+    }
+
     const ticksPerc = tick / ticks;
     const easeVal = ease(ticksPerc);
 
@@ -21,7 +27,7 @@ function scrollTo(element, to, duration) {
   };
 
   raf(() => scroll());
-}
+});
 
 const navItems = document.querySelectorAll('.js-navItem a');
 navItems.forEach((item) => {
@@ -33,6 +39,13 @@ navItems.forEach((item) => {
 
   item.addEventListener('click', (e) => {
     e.preventDefault();
-    scrollTo(document.documentElement, section.offsetTop, 600);
+    scrollTo(
+      document.documentElement,
+      section.offsetTop,
+      600,
+    ).then(() => {
+      store.dispatch(actions.updateHash(id));
+      raf(() => store.dispatch(actions.updateActiveItem(id)));
+    });
   });
 });

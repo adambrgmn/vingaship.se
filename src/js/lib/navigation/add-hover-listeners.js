@@ -11,29 +11,19 @@ export default () => {
   let delay;
   const navItems = document.querySelectorAll('.js-navItem');
 
-  navItems.forEach((navItem) => {
-    navItem.addEventListener('mouseenter', ({ target }) => {
-      const dimensions = getDimensions(target);
-      raf(() => store.dispatch(actions.updateDimensions(dimensions)));
-
+  navItems.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
       if (delay) {
-        window.clearTimeout(delay);
+        clearTimeout(delay);
         delay = undefined;
       }
+
+      raf(() => store.dispatch(actions.updateHoverItem(item.dataset.anchor)));
     });
 
-    navItem.addEventListener('mouseleave', () => {
-      let dimensions = { width: 0, offset: 0 };
-      const activeItem = store.getState().navigation.activeItem;
-
-      if (activeItem) {
-        const active = document.querySelector(`[data-anchor=${activeItem}]`);
-        const { width, left: offset } = active.getBoundingClientRect();
-        dimensions = { width, offset };
-      }
-
-      delay = window.setTimeout(() => {
-        raf(() => store.dispatch(actions.updateDimensions(dimensions)));
+    item.addEventListener('mouseleave', () => {
+      delay = setTimeout(() => {
+        raf(() => store.dispatch(actions.updateHoverItem(null)));
       }, 200);
     });
   });
