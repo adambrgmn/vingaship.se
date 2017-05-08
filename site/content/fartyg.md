@@ -1,6 +1,5 @@
 ---
 date: 2017-04-21T12:28:30+02:00
-draft: true
 title: Fartyg
 weight: 2
 menu: main

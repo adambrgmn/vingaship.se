@@ -1,6 +1,5 @@
 ---
 date: 2017-04-21T12:28:39+02:00
-draft: true
 title: History
 weight: 3
 menu: main

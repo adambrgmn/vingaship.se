@@ -1,6 +1,5 @@
 ---
 date: 2017-04-21T12:28:49+02:00
-draft: true
 title: Kontakt
 weight: 4
 menu: main

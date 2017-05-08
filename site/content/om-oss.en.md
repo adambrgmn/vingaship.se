@@ -1,6 +1,5 @@
 ---
 date: 2017-04-21T12:28:21+02:00
-draft: true
 title: About us
 weight: 1
 menu: main
