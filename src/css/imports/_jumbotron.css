@@ -3,7 +3,7 @@
   width: 100%;
   height: var(--jumbotron-height);
   margin-bottom: calc(-1 * var(--jumbotron-height));
-  background-image: url("/assets/img/vingaship-0.png");
+  background-image: url('/assets/img/vingaship-0.png');
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -41,13 +41,6 @@
 }
 
 .jumbotron__branding__title {
-  opacity: 0;
-  transform: translateY(-2rem);
-  transition: all 0.3s;
-  transition-delay: calc(var(--animation-duration) * 2);
-
-  &.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  opacity: 1;
+  transform: translateY(0);
 }
