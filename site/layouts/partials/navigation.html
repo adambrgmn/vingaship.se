@@ -2,8 +2,8 @@
   <ul class="navigation__list">
     {{- $currentPage := . -}}
     {{ range .Site.Menus.main }}
-      <li class="navigation__item js-navItem" data-anchor="{{ replace .Name " " "-" | lower }}">
-        <a class="navigation__link" href="#{{ .Name | urlize }}">{{ .Name }}</a>
+      <li class="navigation__item js-navItem" data-anchor="section-{{ replace .Name " " "-" | lower }}">
+        <a class="navigation__link" href="#section-{{ .Name | urlize }}">{{ .Name }}</a>
       </li>
     {{ end }}
   </ul>

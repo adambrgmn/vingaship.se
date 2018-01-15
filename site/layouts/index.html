@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ partial "jumbotron" . }}
   {{ range .Data.Pages }}
-    <section id="{{ .Title | urlize }}" class="section js-scrollAnchor">
+    <section id="section-{{ .Title | urlize }}" class="section js-scrollAnchor">
       <div class="section__content{{ if isset .Params "specs" }} js-sectionContent{{ end }}">
         {{ .Content }}
         {{ if isset .Params "specs" }}

@@ -1,5 +1,5 @@
 <div class="contact-card" id="hcard-{{ replace (.Get "name") " " "-" | lower }}">
-  <img src="{{ .Get "img" | default "/assets/img/profile-anon.png" }}" />
+  <img src="{{ .Get "img" | default "/assets/img/profile-anon.png" }}" alt="Image of {{ .Get "name" }}" />
   <div class="contact-card__table-wrapper">
     <table class="contact-card__table">
       <thead>
