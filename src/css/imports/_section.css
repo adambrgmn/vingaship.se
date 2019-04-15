@@ -36,7 +36,7 @@
 .section__specs,
 .section__specsButton {
   width: 100%;
-  max-width: 25rem;
+  max-width: 35rem;
   overflow: hidden;
   opacity: 1;
   visibility: visible;
