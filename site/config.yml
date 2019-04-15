@@ -23,10 +23,10 @@ blackfriday:
 
 params:
   address:
-    street: Donsö Hamnväg 45
-    zip: SE-430 82
-    city: Donsö
-    country: Sverige
+    street: Talattagatan 10
+    zip: SE-426 76
+    city: Västra Frölunda
+    country: Sweden
 
   emails:
     - info@vingaship.se
