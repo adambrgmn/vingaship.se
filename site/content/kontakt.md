@@ -12,5 +12,5 @@ Per Hansson är vår kontaktman, ansvarig för Sales & Management. Ring 031-97 3
 
 <div class="contact-cards">
   {{< contact-info img="/assets/img/profile-per.png" name="Per Hansson" mail="per@vingaship.se" tel="+4631973392" mob="+46706303116" >}}
-  {{< contact-info name="Eva Plenck" mail="personnel@vingaship.se" tel="+4631973396" mob="+46733500796" >}}
+  {{< contact-info name="Lisa Johansson" mail="personnel@vingaship.se" tel="+4631973396" mob="+46708924838" >}}
 </div>
