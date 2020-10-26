@@ -6,15 +6,15 @@
   background-position: 50% 50%;
 
   &:nth-of-type(3n + 0) {
-    background-image: url("/assets/img/vingaship-1.png");
+    background-image: url('/assets/img/vingaship-1.png');
   }
 
   &:nth-of-type(3n + 1) {
-    background-image: url("/assets/img/vingaship-2.png");
+    background-image: url('/assets/img/vingaship-2.png');
   }
 
   &:nth-of-type(3n + 2) {
-    background-image: url("/assets/img/vingaship-3.png");
+    background-image: url('/assets/img/vingaship-3.png');
   }
 
   &:last-of-type {
@@ -75,15 +75,21 @@
     border-bottom: 1px solid var(--color-light-grey);
   }
 
-  & thead tr { border-width: 2px; }
-  & tfoot tr { border: none; }
+  & thead tr {
+    border-width: 2px;
+  }
+  & tfoot tr {
+    border: none;
+  }
 
   & td,
   & th {
     padding: var(--ms-2) 0;
   }
 
-  & tfoot td { text-align: right; }
+  & tfoot td {
+    text-align: right;
+  }
 }
 
 .section__specsButton button {
@@ -121,6 +127,7 @@
 
 .contact-card {
   width: 45%;
+  margin: 0 auto;
 }
 
 .contact-card__table-wrapper {
