@@ -26,11 +26,10 @@ specs:
     value: 13 m
   - title: Depth
     value: 5.2 m
-
 ---
 
 # Fleet
 
-One ship that under our management is Vinga Safir. A well run product tanker from 2000 that operates in Europe. Vinga Safir sails under Faroe flag, is on 2 650 dwt, and has a total length of 80 meters and a crew of 8 persons.
+Earlier the product tanker Vinga Safir was part of the fleet. The vessel was sold in May 2020. Befre that the vessel operated in Europe under Faroe flag. Vinga Safir is on 2 650 dwt, and has a total length of 80 meters
 
 ![Vinga Safir](/assets/img/vinga-safir-1.jpg)

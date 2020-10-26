@@ -4,9 +4,6 @@ title: Fartyg
 weight: 2
 menu: main
 
-img: http://placehold.it/500x300
-secondaryImg: http://placehold.it/600x300
-
 specsLink: /assets/img/vinga-safir-2015.pdf
 specs:
   - title: IMO nummer
@@ -29,11 +26,10 @@ specs:
     value: 13 m
   - title: Djup
     value: 5.2 m
-
 ---
 
 # Fartyg
 
-Ett fartyg vi bemannar och sköter tekniskt är Vinga Safir. En välskött produkttanker från år 2000 i Europafart. Vinga Safir seglar under Färöisk flagg, är på 2 650 ton dödvikt, har en total längd på 80 meter och en besättning på 8 personer.
+Tidigare ingick produkttankern Vinga Safir i flottan. Vinga Safir såldes i maj 2020. Innan dess gick hon i Europafart under färöisk flagg. Hon är på 2 650 ton dödvikt, har en total längd på 80 meter.
 
 ![Vinga Safir](/assets/img/vinga-safir-1.jpg)
