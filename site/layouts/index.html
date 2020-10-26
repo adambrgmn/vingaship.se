@@ -1,11 +1,6 @@
-{{ define "main" }}
-  {{ partial "jumbotron" . }}
-  {{ range .Data.Pages }}
-    <section id="section-{{ .Title | urlize }}" class="section js-scrollAnchor">
-      <div class="section__content{{ if isset .Params "specs" }} js-sectionContent{{ end }}">
-        {{ .Content }}
-      </div>
-    </section>
-    <div class="section__divider"></div>
-  {{ end }}
-{{ end }}
+{{ define "main" }} {{ partial "jumbotron" . }} {{ range .Data.Pages }}
+<section id="section-{{ .Title | urlize }}" class="section js-scrollAnchor">
+  <div class="section__content">{{ .Content }}</div>
+</section>
+<div class="section__divider"></div>
+{{ end }} {{ end }}

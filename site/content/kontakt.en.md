@@ -7,6 +7,6 @@ menu: main
 
 # Contact
 
-Per Hansson is our ceo and contact, responsible for Sales & Management. Call +46 31-97 33 92 or write to [per@vingaship.se](mailto:per@vingaship.se) to reach him. Your needs could be everything from a general request, a ready ship, a ready to go crew for technology and/or operation or just a position which is hard to fill. For questions concerning HR, contact Eva Plenk. You reach her on [personnel@vingaship.se](mailto:personnel@vingaship.se).
+Per Hansson is responsible for Sales & Management. Call +46 31-97 33 92 or write to [per@vingaship.se](mailto:per@vingaship.se) to reach him. Your needs could be everything from a general request, a ready ship, a ready to go crew for technology and/or operation or just a position which is hard to fill.
 
 {{< contact-info img="/assets/img/profile-per-2020.jpg" name="Per Hansson" mail="per@vingaship.se" tel="+4631973392" mob="+46706303116" >}}
