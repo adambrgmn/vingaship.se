@@ -4,4 +4,4 @@
 
 [build.environment]
   NODE_VERSION = "12"
-  HUGO_VERSION = "0.62"
+  HUGO_VERSION = "0.62.2"
