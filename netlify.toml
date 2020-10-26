@@ -2,7 +2,6 @@
   command = "yarn run build"
   publish = "dist"
 
-[context.production]
-  [context.production.environment]
-    NODE_VERSION = "12"
-    HUGO_VERSION = "0.62"
+[build.environment]
+  NODE_VERSION = "12"
+  HUGO_VERSION = "0.62"
