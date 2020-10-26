@@ -13,17 +13,5 @@ other = "Telefon"
 [partners]
 other = "Partners"
 
-[specs-title]
-other = "Specifikationer"
-
-[specs-download]
-other = "Ladda ner specifikationer"
-
-[specs-show]
-other = "Visa specifikationer"
-
-[specs-hide]
-other = "Tillbaka"
-
 [page-not-found]
 other = "Sidan kunde inte hittas"

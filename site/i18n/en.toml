@@ -13,17 +13,5 @@ other = "Phones"
 [partners]
 other = "Partners"
 
-[specs-title]
-other = "Specifications"
-
-[specs-download]
-other = "Download specifications"
-
-[specs-show]
-other = "Show specifications"
-
-[specs-hide]
-other = "Back"
-
 [page-not-found]
 other = "Page could not be found"
