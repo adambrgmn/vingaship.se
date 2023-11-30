@@ -1,21 +1,21 @@
-baseurl: "http://www.vingaship.se/"
-title: "Vinga Ship Management"
-languageCode: "sv"
-defaultContentLanguage: "sv"
+baseurl: 'http://www.vingaship.se/'
+title: 'Vinga Ship Management'
+languageCode: 'sv'
+defaultContentLanguage: 'sv'
 defaultContentLanguageInSubdir: false
 enableRobotsTXT: true
 enableEmoji: true
-MetaDataFormat: "yaml"
+MetaDataFormat: 'yaml'
 EnableMissingTranslationPlaceholders: true
-googleAnalytics: "UA-98787355-1"
+googleAnalytics: 'UA-98787355-1'
 
 languages:
   sv:
     weight: 0
-    languageName: "Svenska"
+    languageName: 'Svenska'
   en:
     weight: 1
-    languageName: "English"
+    languageName: 'English'
 
 blackfriday:
   extensions:
@@ -23,9 +23,9 @@ blackfriday:
 
 params:
   address:
-    street: Talattagatan 10
-    zip: SE-426 76
-    city: Västra Frölunda
+    street: Åsenliden 2
+    zip: SE-430 82
+    city: Donsö
     country: Sweden
 
   emails:
@@ -35,7 +35,7 @@ params:
     - invoice@vingaship.se
 
   phone:
-    - "+4631973392"
+    - '+4631973392'
 
   partners:
     - title: Alba Tankers
